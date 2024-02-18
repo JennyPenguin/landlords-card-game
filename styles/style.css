@@ -1,0 +1,191 @@
+@font-face {
+    font-family: "SpaceGrotesk";
+    src: url('fonts/SpaceGrotesk-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: "ZCOOLKuaiLe";
+    src: url('fonts/ZCOOLKuaiLe-Regular.ttf');
+}
+
+@font-face {
+    font-family: "ZCOOLXiaoWei";
+    src: url('fonts/ZCOOLXiaoWei-Regular.ttf');
+}
+
+.game {
+    font-family: "ZCOOLXiaoWei";
+}
+
+#startScreen {
+    background: url('assets/Start_Screen_Duo.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+h1 {
+    color: white;
+    flex: 0 0 100%;
+    font-size: 500%;
+    text-align: center;
+    background-color: pink;
+    padding: 3px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.5);
+}
+
+.btn-primary {
+    padding: 10px;
+    border-radius: 15px;
+    background-color: pink;
+    border-color: pink;
+    font-family: "ZCOOLXiaoWei";
+    color: white;
+    font-size: 200%;
+}
+
+.btn-option {
+    padding: 10px 15px;
+    border-radius: 35px;
+    /* border: solid 4px #61ca2c; */
+    border: none;
+    background-color: rgb(35, 163, 78);
+    font-family: "ZCOOLXiaoWei";
+    font-size: 175%;
+    color: #fff;
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.5);
+}
+
+button a,
+button a:active,
+button a:hover,
+button a:focus {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+button {
+    transition: transform 0.2s linear;
+}
+
+.selected {
+    transform: translateY(-22px);
+}
+
+button:hover {
+    color: inherit;
+    text-decoration: inherit;
+    transform: translateY(-5px);
+    color: #fff;
+}
+
+#gameScreen {
+    background: url('assets/Game_Background_.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.backCard {
+    color: rgb(255, 136, 136);
+    text-shadow: 0 0 5px #FF0000, 0 0 8px #0000FF;
+    display: flex;
+    font-size: larger;
+    justify-content: center;
+    align-items: center;
+}
+
+.dialogue {
+    position: absolute;
+    top: -20px;
+    height: 100px;
+    width: 150px;
+    background-size: contain;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 200%;
+}
+
+
+#dialogueBox2 {
+    right: -150px;
+    background: url("assets/DialogueBox.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 0 0 5% 5%;
+}
+
+#dialogueBox3 {
+    left: -150px;
+    background: url("assets/DialogueBoxR.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 0 5% 5% 0;
+}
+
+#loadingScreen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: pink;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+#endingScreen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+
+#loadingScreen p,
+#endingScreen p {
+    font-family: "ZCOOLXiaoWei";
+    font-size: 250%;
+    color: #fff;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    /* Light grey */
+    border-top: 16px solid #ff3a9c;
+    /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#endingScreen button {
+    background: pink;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 100%;
+}

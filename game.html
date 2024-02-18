@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="styles/layout.css" type="text/css">
+    <link rel="stylesheet" href="styles/style.css" type="text/css">
+</head>
+
+<body>
+    <div id="endingScreen">
+        <p id="winner">地主赢了!</p>
+        <button onclick="restart()">↻</button>
+    </div>
+    <div id="loadingScreen">
+        <p>加载游戏资源中</p>
+        <div class="loader"></div>
+    </div>
+    <div class="game" id="gameScreen">
+        <div class="layout top">
+            <div class="alert" id="gameBanner">
+                等待玩家1...
+            </div>
+            <div class="lordCards">
+                <div class="card back" id="lord1"></div>
+                <div class="card back" id="lord2"></div>
+                <div class="card back" id="lord3"></div>
+            </div>
+        </div>
+        <div class="layout left">
+            <div class="leftV title">
+                <div>
+                    <h2 class="pTitle" id="name2">玩家2</h2>
+                    <h2 id="p2">村民</h2>
+                </div>
+                <div class="backCard" id="cardCount2">17</div>
+            </div>
+            <div id="dialogueBox2" class="dialogue">1分</div>
+        </div>
+        <div class="player Left" id="p2Cards"></div>
+        <div class="layout right">
+            <div class="title rightV">
+                <div>
+                    <h2 class="pTitle" id="name3">玩家3</h2>
+                    <h2 id="p3">村民</h2>
+                </div>
+                <div class="backCard" id="cardCount3">17</div>
+            </div>
+            <div id="dialogueBox3" class="dialogue">1分</div>
+        </div>
+        <div class="player Right" id="p3Cards"></div>
+        <div class="layout center">
+        </div>
+        <div class="player Center" id="p1Cards">
+            <div class="options" id="optionMenu">
+                <button class="btn-option play moveB" id="use" onclick="onPlay(this)">出</button>
+                <button class="btn-option play moveB" id="pass" onclick="onPass(this)">过</button>
+                <button class="btn-option play bid" onclick="onChosenLord(this)" data-key="-1">不叫</button>
+                <button class="btn-option play bid" onclick="onChosenLord(this)" data-key="1">1分</button>
+                <button class="btn-option play bid" onclick="onChosenLord(this)" data-key="2">2分</button>
+                <button class="btn-option play bid" onclick="onChosenLord(this)" data-key="3">3分</button>
+            </div>
+        </div>
+        <div class="layout bottom">
+            <div class="title centerV">
+                <div>
+                    <h2 class="pTitle" id="name1">玩家1</h2>
+                    <h2 id="p1">村民</h2>
+                </div>
+            </div>
+            <div class="centerFlex">
+                <div class="cards" id="playerCards"></div>
+            </div>
+
+        </div>
+    </div>
+    <script src="scripts/api.js"></script>
+    <script src="scripts/cardCompare.js"></script>
+    <script src="scripts/ai.js"></script>
+    <script src="scripts/graphics.js"></script>
+    <script src="scripts/game.js"></script>
+</body>
+
+</html>
